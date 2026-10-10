@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Connect with Nigerian businesses, explore chamber events, check Lagos weather, and discover member organizations."
+    >
+    <meta name="author" content="Nsikak Asuquo">
+    <meta property="og:title" content="Nigeria Chamber Directory | Supporting Nigerian Business">
+    <meta
+      property="og:description"
+      content="Connect with Nigerian businesses, discover chamber events, and meet member organizations."
+    >
+    <meta
+      property="og:image"
+      content="https://nsikak0.github.io/wdd231/chamber/images/directory-social.svg"
+    >
+    <meta property="og:url" content="https://nsikak0.github.io/wdd231/chamber/">
+    <meta property="og:type" content="website">
+    <title>Nigeria Chamber Directory | Supporting Nigerian Business</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/home.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Nigeria Chamber Directory home">
+          <img src="images/brand-mark.svg" alt="" width="48" height="48">
+          <span class="brand__name">Nigeria <span>Chamber Directory</span></span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+        </button>
+        <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="home-hero" aria-labelledby="hero-heading">
+        <img
+          class="home-hero__image"
+          src="images/lagos-hero.svg"
+          alt="Illustrated Lagos waterfront skyline at sunset"
+          width="1600"
+          height="760"
+          fetchpriority="high"
+        >
+        <div class="home-hero__content">
+          <p class="eyebrow">Nigeria's business community</p>
+          <h1 id="hero-heading">Stronger together. Growing together.</h1>
+          <h2>Building connections for Nigerian enterprise</h2>
+          <p>
+            Meet the organizations, people, and ideas advancing commerce and
+            opportunity across Nigeria.
+          </p>
+          <a class="button button--gold" href="join.html">Join the chamber</a>
+        </div>
+      </section>
+
+      <div class="home-content">
+        <section class="home-panel events-panel" aria-labelledby="events-heading">
+          <p class="eyebrow eyebrow--green">Mark your calendar</p>
+          <h2 id="events-heading">Upcoming events</h2>
+          <article class="event-item">
+            <div class="event-date">
+              <span>18</span>
+              <span>Nov</span>
+            </div>
+            <div>
+              <h3>Nigeria Business Connections Forum</h3>
+              <p>
+                Meet fellow business leaders and explore new opportunities for
+                collaboration and growth.
+              </p>
+              <p class="event-meta">Lagos · 10:00 a.m. WAT</p>
+            </div>
+          </article>
+          <article class="event-item">
+            <div class="event-date event-date--gold">
+              <span>26</span>
+              <span>Nov</span>
+            </div>
+            <div>
+              <h3>Export Readiness Workshop</h3>
+              <p>
+                Practical guidance for Nigerian small businesses preparing to
+                reach customers in new markets.
+              </p>
+              <p class="event-meta">Online · 1:00 p.m. WAT</p>
+            </div>
+          </article>
+          <p class="sample-note">Sample event listings for this coursework project.</p>
+        </section>
+
+        <section class="home-panel weather-panel" aria-labelledby="weather-heading">
+          <p class="eyebrow eyebrow--green">Lagos, Nigeria</p>
+          <h2 id="weather-heading">Local weather</h2>
+          <div id="weather-current" class="weather-current" aria-live="polite">
+            <p class="weather-status">Loading current conditions…</p>
+          </div>
+          <h3 class="forecast-heading">3-day forecast</h3>
+          <div id="weather-forecast" class="weather-forecast" aria-live="polite">
+            <p class="weather-status">Loading forecast…</p>
+          </div>
+          <p class="weather-attribution">
+            Weather data: <a href="https://open-meteo.com/">Open-Meteo</a>
+          </p>
+        </section>
+
+        <section class="spotlights-section" aria-labelledby="spotlights-heading">
+          <div class="spotlights-heading">
+            <div>
+              <p class="eyebrow eyebrow--green">Member network</p>
+              <h2 id="spotlights-heading">Business spotlights</h2>
+            </div>
+            <a class="text-link" href="directory.html">Explore the directory</a>
+          </div>
+          <p class="sample-note">
+            Featured listings are illustrative coursework samples, not verified
+            NACCIMA members.
+          </p>
+          <div id="spotlight-list" class="spotlight-list" aria-live="polite">
+            <p class="spotlight-status">Loading member spotlights…</p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <section class="footer-contact" aria-labelledby="contact-heading">
+          <a class="brand brand--footer" href="index.html">
+            <img src="images/brand-mark.svg" alt="" width="42" height="42">
+            <span class="brand__name">Nigeria <span>Chamber Directory</span></span>
+          </a>
+          <h2 id="contact-heading">NACCIMA National Secretariat</h2>
+          <address>
+            8A Oba Akinjobi Way, Ikeja GRA<br>
+            Lagos, Nigeria<br>
+            <a href="tel:+2348118877562">+234 811 8877 562</a><br>
+            <a href="mailto:info@naccima.com">info@naccima.com</a>
+          </address>
+          <p class="footer-disclaimer">
+            Independent WDD 231 coursework demonstration; not an official NACCIMA website.
+          </p>
+        </section>
+        <section class="footer-project" aria-labelledby="project-heading">
+          <h2 id="project-heading">Project information</h2>
+          <p>Nsikak Asuquo</p>
+          <p>WDD 231 — Web Frontend Development I</p>
+          <p>© <span id="current-year"></span> Nsikak Asuquo</p>
+          <p>Last modified: <span id="last-modified">Loading date…</span></p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

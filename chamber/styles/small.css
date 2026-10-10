@@ -468,6 +468,409 @@ button:focus-visible {
   background: #fff0f0;
 }
 
+.home-hero {
+  position: relative;
+  display: grid;
+  min-height: 29rem;
+  align-items: center;
+  overflow: hidden;
+  color: var(--white);
+  background: var(--navy);
+}
+
+.home-hero::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgb(12 25 35 / 92%) 0%,
+    rgb(12 25 35 / 75%) 56%,
+    rgb(12 25 35 / 14%) 100%
+  );
+  content: "";
+}
+
+.home-hero__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-hero__content {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+  padding-block: 3rem;
+}
+
+.home-hero__content .eyebrow {
+  color: #f1d688;
+}
+
+.home-hero h1 {
+  max-width: 13ch;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2rem, 8vw, 4rem);
+  font-weight: 800;
+  line-height: 1.08;
+}
+
+.home-hero h2 {
+  max-width: 32rem;
+  margin-top: 0.9rem;
+  color: #f0d78e;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(1.05rem, 4vw, 1.4rem);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.home-hero__content > p:not(.eyebrow) {
+  max-width: 35rem;
+  margin-top: 0.45rem;
+  color: #f0f3f1;
+  font-size: 1rem;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 2.9rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.25rem;
+  padding: 0.7rem 1.2rem;
+  border: 2px solid transparent;
+  border-radius: 0.35rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button--gold {
+  color: var(--navy);
+  background: #f1d688;
+}
+
+.button--gold:hover {
+  background: #ffdf91;
+}
+
+.home-content {
+  display: grid;
+  width: min(100% - 2rem, 72rem);
+  gap: 1.25rem;
+  margin-inline: auto;
+  padding-block: 2rem 3rem;
+}
+
+.home-panel {
+  min-width: 0;
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 0.55rem;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.home-panel h2,
+.spotlights-heading h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(1.45rem, 5vw, 1.9rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.events-panel > .eyebrow,
+.weather-panel > .eyebrow {
+  margin-bottom: 0.35rem;
+}
+
+.event-item {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  gap: 0.8rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.event-item:last-of-type {
+  border-bottom: 0;
+}
+
+.event-date {
+  display: grid;
+  width: 3.25rem;
+  height: 3.5rem;
+  align-content: center;
+  justify-items: center;
+  border-radius: 0.35rem;
+  color: var(--white);
+  background: var(--green);
+  line-height: 1.15;
+}
+
+.event-date span:first-child {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.event-date span:last-child {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.event-date--gold {
+  color: var(--navy);
+  background: #f1d688;
+}
+
+.event-item h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.event-item p {
+  margin-top: 0.3rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.event-item .event-meta {
+  color: var(--green-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.sample-note {
+  margin-top: 0.65rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.weather-current {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 0.8rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  background: var(--green-light);
+}
+
+.weather-current__top {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.weather-temperature {
+  color: var(--green-dark);
+  font-family: "Manrope", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.weather-description {
+  font-weight: 700;
+}
+
+.weather-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.85rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.forecast-heading {
+  margin-top: 1rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.weather-forecast {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.55rem;
+}
+
+.forecast-day {
+  min-width: 0;
+  padding: 0.65rem 0.35rem;
+  border: 1px solid var(--line);
+  border-radius: 0.35rem;
+  text-align: center;
+}
+
+.forecast-day h4 {
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.forecast-day__description {
+  min-height: 2.25rem;
+  margin-top: 0.25rem;
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+.forecast-day__temperatures {
+  margin-top: 0.3rem;
+  color: var(--green-dark);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.weather-attribution {
+  margin-top: 0.6rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.weather-attribution a {
+  color: var(--green-dark);
+}
+
+.weather-status,
+.weather-error,
+.spotlight-status,
+.spotlight-error {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.weather-error,
+.spotlight-error {
+  grid-column: 1 / -1;
+  padding: 0.8rem;
+  border-radius: 0.35rem;
+  color: #842727;
+  background: #fff0f0;
+}
+
+.spotlights-section {
+  min-width: 0;
+}
+
+.spotlights-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.8rem;
+}
+
+.spotlights-heading .eyebrow {
+  margin-bottom: 0.25rem;
+}
+
+.text-link {
+  color: var(--green-dark);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.spotlight-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+
+.spotlight-card {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  gap: 0.65rem 0.85rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-top: 0.25rem solid var(--gold);
+  border-radius: 0.5rem;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.spotlight-card[data-level="2"] {
+  border-top-color: #87969d;
+}
+
+.spotlight-card__logo {
+  grid-row: span 2;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid var(--line);
+  border-radius: 0.4rem;
+  object-fit: contain;
+}
+
+.spotlight-card__information {
+  min-width: 0;
+}
+
+.spotlight-card__information .eyebrow {
+  margin-bottom: 0.25rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+.spotlight-card h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.spotlight-card__description {
+  margin-top: 0.3rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.spotlight-card__details {
+  display: grid;
+  grid-column: 1 / -1;
+  justify-items: start;
+  gap: 0.3rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  overflow-wrap: anywhere;
+}
+
+.spotlight-card__details a {
+  color: var(--green-dark);
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+.spotlight-card__level {
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  color: #48545b;
+  background: #e9edef;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.spotlight-card[data-level="3"] .spotlight-card__level {
+  color: #70520d;
+  background: #f7edcf;
+}
+
 .site-footer {
   color: #f3f5f2;
   background: var(--navy);

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+  <rect width="160" height="160" rx="18" fill="#f5e9e1"/>
+  <path d="M80 31 119 53v45l-39 23-39-23V53z" fill="#a74932"/>
+  <path d="M80 39v73m-31-54 62 36m-62 0 62-36M49 53l62 36m0-36L49 89m12-43v57m38-57v57" fill="none" stroke="#f5d18c" stroke-width="4"/>
+  <text x="80" y="143" fill="#613324" font-family="Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle">HERITAGE</text>
+</svg>

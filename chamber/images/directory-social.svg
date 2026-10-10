@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0c1923"/>
+  <path d="M0 500 330 170l330 330 210-210 330 330v340H0z" fill="#14634c" opacity=".42"/>
+  <circle cx="1000" cy="125" r="260" fill="#d4ae58" opacity=".14"/>
+  <rect x="84" y="92" width="80" height="80" rx="20" fill="#14634c"/>
+  <path d="m124 104 28 16v32l-28 16-28-16v-32z" fill="none" stroke="#e2c977" stroke-width="3"/>
+  <path d="M109 146v-27h5l20 18v-18h5v27h-5l-20-18v18z" fill="#fff"/>
+  <text x="84" y="270" fill="#e2c977" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="7">CONNECT • COLLABORATE • GROW</text>
+  <text x="80" y="365" fill="#fff" font-family="Arial, sans-serif" font-size="74" font-weight="700">Nigeria Business</text>
+  <text x="80" y="455" fill="#fff" font-family="Arial, sans-serif" font-size="74" font-weight="700">Directory</text>
+  <text x="84" y="520" fill="#dce5e1" font-family="Arial, sans-serif" font-size="30">Discover organizations across Nigeria</text>
+</svg>

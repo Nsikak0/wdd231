@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+  <rect width="160" height="160" rx="18" fill="#f3ece0"/>
+  <path d="M41 105V66h19v39m10 0V49h19v56m10 0V76h19v29" fill="none" stroke="#9a6928" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m44 59 31-17 27 16 17-14" fill="none" stroke="#14634c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M108 44h13v13" fill="none" stroke="#14634c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="80" y="140" fill="#604822" font-family="Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle">OYO WORKS</text>
+</svg>

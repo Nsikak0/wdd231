@@ -1,0 +1,76 @@
+@media (min-width: 42rem) {
+  .header-inner,
+  .directory-heading,
+  .footer-inner {
+    width: min(100% - 3rem, 72rem);
+    margin-inline: auto;
+  }
+
+  .header-inner {
+    padding-inline: 0;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .primary-navigation {
+    position: static;
+    display: block;
+    padding: 0;
+  }
+
+  .primary-navigation ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  .primary-navigation a {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.94rem;
+  }
+
+  .page-intro__inner {
+    width: min(100% - 3rem, 72rem);
+    padding-block: 4.25rem;
+  }
+
+  .directory-section {
+    width: min(100% - 3rem, 72rem);
+    padding-block: 2.75rem 3.5rem;
+  }
+
+  .directory-heading {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    padding-block: 2.75rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .member-directory--grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .member-directory--grid .member-card {
+    min-height: 18rem;
+  }
+}
+
+@media (min-width: 68rem) {
+  .member-directory--grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .member-directory--grid .member-card {
+    min-height: 19rem;
+  }
+}

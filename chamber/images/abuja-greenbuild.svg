@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+  <rect width="160" height="160" rx="18" fill="#e8f0ee"/>
+  <path d="M37 91 80 48l43 43v32H37z" fill="#14634c"/>
+  <path d="M58 91V70h15v21m13 0V61h16v30m-48 12h52" fill="none" stroke="#fff" stroke-width="5"/>
+  <circle cx="116" cy="47" r="13" fill="#d4ae58"/>
+  <text x="80" y="145" fill="#183c33" font-family="Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle">GREENBUILD</text>
+</svg>

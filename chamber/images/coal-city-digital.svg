@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+  <rect width="160" height="160" rx="18" fill="#eeeaf5"/>
+  <rect x="39" y="39" width="82" height="63" rx="8" fill="#584282"/>
+  <path d="M47 48h66v45H47z" fill="#d8cdf0"/>
+  <path d="m64 64-10 8 10 8m32-16 10 8-10 8M87 59l-13 27" fill="none" stroke="#584282" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M67 111h26m-13-9v9" stroke="#584282" stroke-width="5" stroke-linecap="round"/>
+  <text x="80" y="144" fill="#443363" font-family="Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">COAL CITY DIGITAL</text>
+</svg>

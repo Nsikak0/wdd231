@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Lagos Meridian Foods",
+    "address": "14 Marina Road, Lagos Island, Lagos",
+    "phone": "+234 800 000 0101",
+    "website": "https://example.com/",
+    "image": "lagos-meridian.svg",
+    "membershipLevel": 3,
+    "industry": "Agriculture & Food",
+    "description": "A sample food processing and regional produce distribution company."
+  },
+  {
+    "name": "Abuja GreenBuild Partners",
+    "address": "22 Garki District, Abuja, FCT",
+    "phone": "+234 800 000 0102",
+    "website": "https://example.com/",
+    "image": "abuja-greenbuild.svg",
+    "membershipLevel": 2,
+    "industry": "Construction",
+    "description": "A sample building consultancy focused on efficient commercial spaces."
+  },
+  {
+    "name": "Kano Heritage Textiles",
+    "address": "8 Murtala Mohammed Way, Kano",
+    "phone": "+234 800 000 0103",
+    "website": "https://example.com/",
+    "image": "kano-heritage.svg",
+    "membershipLevel": 1,
+    "industry": "Manufacturing",
+    "description": "A sample textile maker connecting local craft with modern production."
+  },
+  {
+    "name": "Port Harcourt Bluewater Logistics",
+    "address": "31 Aba Road, Port Harcourt, Rivers",
+    "phone": "+234 800 000 0104",
+    "website": "https://example.com/",
+    "image": "bluewater-logistics.svg",
+    "membershipLevel": 3,
+    "industry": "Transport & Logistics",
+    "description": "A sample freight and supply-chain services company serving the coast."
+  },
+  {
+    "name": "Enugu Coal City Digital",
+    "address": "16 Independence Avenue, Enugu",
+    "phone": "+234 800 000 0105",
+    "website": "https://example.com/",
+    "image": "coal-city-digital.svg",
+    "membershipLevel": 2,
+    "industry": "Technology",
+    "description": "A sample digital studio supporting growing Nigerian enterprises."
+  },
+  {
+    "name": "Ibadan OyoWorks Advisory",
+    "address": "5 Cocoa Road, Ibadan, Oyo",
+    "phone": "+234 800 000 0106",
+    "website": "https://example.com/",
+    "image": "oyoworks-advisory.svg",
+    "membershipLevel": 1,
+    "industry": "Business Services",
+    "description": "A sample business advisory helping small firms plan and grow."
+  },
+  {
+    "name": "Calabar CrossRiver EcoTours",
+    "address": "19 Marian Road, Calabar, Cross River",
+    "phone": "+234 800 000 0107",
+    "website": "https://example.com/",
+    "image": "ecotours-calabar.svg",
+    "membershipLevel": 2,
+    "industry": "Tourism & Hospitality",
+    "description": "A sample hospitality operator promoting responsible local tourism."
+  }
+]

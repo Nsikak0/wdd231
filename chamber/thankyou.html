@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Thank you for submitting a membership application to the Nigeria Chamber Directory."
+    >
+    <meta name="author" content="Nsikak Asuquo">
+    <meta property="og:title" content="Application received | Nigeria Chamber Directory">
+    <meta
+      property="og:description"
+      content="Review the information submitted with your illustrative membership application."
+    >
+    <meta
+      property="og:image"
+      content="https://nsikak0.github.io/wdd231/chamber/images/directory-social.svg"
+    >
+    <meta
+      property="og:url"
+      content="https://nsikak0.github.io/wdd231/chamber/thankyou.html"
+    >
+    <meta property="og:type" content="website">
+    <title>Application received | Nigeria Chamber Directory</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/thankyou.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Nigeria Chamber Directory home">
+          <img src="images/brand-mark.svg" alt="" width="48" height="48">
+          <span class="brand__name">Nigeria <span>Chamber Directory</span></span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+        </button>
+        <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="page-intro" aria-labelledby="confirmation-heading">
+        <div class="page-intro__inner">
+          <p class="eyebrow">Thank you</p>
+          <h1 id="confirmation-heading">Application received</h1>
+          <p class="page-intro__text">
+            Thank you for taking the time to complete the membership application.
+            Here is a summary of the required information you submitted.
+          </p>
+        </div>
+      </section>
+      <section class="confirmation-section" aria-labelledby="summary-heading">
+        <div class="confirmation-card surface">
+          <h2 id="summary-heading">Application summary</h2>
+          <p id="confirmation-message" class="confirmation-message" role="status" aria-live="polite"></p>
+          <dl id="application-summary" class="application-summary" hidden>
+            <div><dt>First name</dt><dd data-field="firstName"></dd></div>
+            <div><dt>Last name</dt><dd data-field="lastName"></dd></div>
+            <div><dt>Email address</dt><dd data-field="email"></dd></div>
+            <div><dt>Mobile phone</dt><dd data-field="phone"></dd></div>
+            <div><dt>Business or organization</dt><dd data-field="organization"></dd></div>
+            <div><dt>Application submitted</dt><dd data-field="timestamp"></dd></div>
+          </dl>
+          <a class="button button--gold" href="index.html">Return to home</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <section class="footer-contact" aria-labelledby="contact-heading">
+          <a class="brand brand--footer" href="index.html">
+            <img src="images/brand-mark.svg" alt="" width="42" height="42">
+            <span class="brand__name">Nigeria <span>Chamber Directory</span></span>
+          </a>
+          <h2 id="contact-heading">NACCIMA National Secretariat</h2>
+          <address>
+            8A Oba Akinjobi Way, Ikeja GRA<br>
+            Lagos, Nigeria<br>
+            <a href="tel:+2348118877562">+234 811 8877 562</a><br>
+            <a href="mailto:info@naccima.com">info@naccima.com</a>
+          </address>
+          <p class="footer-disclaimer">
+            Independent WDD 231 coursework demonstration; not an official NACCIMA website.
+          </p>
+        </section>
+        <section class="footer-project" aria-labelledby="project-heading">
+          <h2 id="project-heading">Project information</h2>
+          <p>Nsikak Asuquo</p>
+          <p>WDD 231 — Web Frontend Development I</p>
+          <p>© <span id="current-year"></span> Nsikak Asuquo</p>
+          <p>Last modified: <span id="last-modified">Loading date…</span></p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

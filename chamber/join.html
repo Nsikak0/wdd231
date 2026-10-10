@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Apply to join the Nigeria Chamber Directory and learn about the illustrative membership levels and benefits."
+    >
+    <meta name="author" content="Nsikak Asuquo">
+    <meta property="og:title" content="Join | Nigeria Chamber Directory">
+    <meta
+      property="og:description"
+      content="Explore membership options and submit an application to the Nigeria Chamber Directory."
+    >
+    <meta
+      property="og:image"
+      content="https://nsikak0.github.io/wdd231/chamber/images/directory-social.svg"
+    >
+    <meta
+      property="og:url"
+      content="https://nsikak0.github.io/wdd231/chamber/join.html"
+    >
+    <meta property="og:type" content="website">
+    <title>Join | Nigeria Chamber Directory</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/join.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Nigeria Chamber Directory home">
+          <img src="images/brand-mark.svg" alt="" width="48" height="48">
+          <span class="brand__name">Nigeria <span>Chamber Directory</span></span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+        </button>
+        <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html" aria-current="page">Join</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="page-intro" aria-labelledby="join-heading">
+        <div class="page-intro__inner">
+          <p class="eyebrow">Build connections. Grow opportunity.</p>
+          <h1 id="join-heading">Join the chamber</h1>
+          <p class="page-intro__text">
+            Tell us about your organization and choose the membership level that
+            best fits your goals.
+          </p>
+        </div>
+      </section>
+
+      <section class="join-layout" aria-label="Membership application and levels">
+        <div class="application-panel surface">
+          <div class="join-section-heading">
+            <p class="eyebrow eyebrow--green">Membership application</p>
+            <h2>Organization details</h2>
+            <p>Fields marked required must be completed before submitting.</p>
+          </div>
+          <form class="membership-form" method="get" action="thankyou.html">
+            <label class="form-field" for="first-name">
+              <span>First name <span class="required-indicator">(required)</span></span>
+              <input
+                id="first-name"
+                name="firstName"
+                type="text"
+                title="Enter your first name."
+                autocomplete="given-name"
+                required
+              >
+            </label>
+            <label class="form-field" for="last-name">
+              <span>Last name <span class="required-indicator">(required)</span></span>
+              <input
+                id="last-name"
+                name="lastName"
+                type="text"
+                title="Enter your last name."
+                autocomplete="family-name"
+                required
+              >
+            </label>
+            <label class="form-field form-field--wide" for="organization-title">
+              <span>Organizational title</span>
+              <input
+                id="organization-title"
+                name="organizationTitle"
+                type="text"
+                title="Use at least seven letters, spaces, or hyphens."
+                autocomplete="organization-title"
+                pattern="[A-Za-z \x2D]{7,}"
+                minlength="7"
+                placeholder="For example, Marketing Manager"
+              >
+            </label>
+            <label class="form-field" for="email">
+              <span>Email address <span class="required-indicator">(required)</span></span>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                title="Enter an email address where we can contact you."
+                autocomplete="email"
+                placeholder="name@example.com"
+                required
+              >
+            </label>
+            <label class="form-field" for="phone">
+              <span>Mobile phone number <span class="required-indicator">(required)</span></span>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                title="Enter your mobile phone number, including the country code."
+                autocomplete="tel"
+                placeholder="+234 800 000 0000"
+                required
+              >
+            </label>
+            <label class="form-field form-field--wide" for="organization">
+              <span>Business or organization name <span class="required-indicator">(required)</span></span>
+              <input
+                id="organization"
+                name="organization"
+                type="text"
+                title="Enter the legal or commonly used name of your organization."
+                autocomplete="organization"
+                required
+              >
+            </label>
+            <label class="form-field form-field--wide" for="membership">
+              <span>Membership level</span>
+              <select id="membership" name="membership" title="Choose a membership level.">
+                <option value="np">NP Membership — No fee</option>
+                <option value="bronze" selected>Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+              </select>
+            </label>
+            <label class="form-field form-field--wide" for="description">
+              <span>Tell us about your organization</span>
+              <textarea
+                id="description"
+                name="description"
+                rows="5"
+                title="Share a brief description of your organization and its goals."
+              ></textarea>
+            </label>
+            <input id="timestamp" name="timestamp" type="hidden" value="">
+            <input
+              class="button button--gold form-submit"
+              type="submit"
+              value="Submit application"
+            >
+          </form>
+        </div>
+
+        <aside class="membership-aside" aria-labelledby="levels-heading">
+          <div class="join-section-heading">
+            <p class="eyebrow eyebrow--green">Choose your fit</p>
+            <h2 id="levels-heading">Membership levels</h2>
+            <p>Explore the sample benefits before you apply.</p>
+          </div>
+          <div class="membership-cards">
+            <article class="membership-card surface membership-card--np">
+              <h3>NP Membership</h3>
+              <p class="membership-price">No fee</p>
+              <p>For eligible nonprofit organizations.</p>
+              <a class="membership-info-link" href="#np-details">View NP benefits</a>
+            </article>
+            <article class="membership-card surface membership-card--bronze">
+              <h3>Bronze Membership</h3>
+              <p class="membership-price">₦50,000 <span>/ year</span></p>
+              <p>Build your network and business visibility.</p>
+              <a class="membership-info-link" href="#bronze-details">View Bronze benefits</a>
+            </article>
+            <article class="membership-card surface membership-card--silver">
+              <h3>Silver Membership</h3>
+              <p class="membership-price">₦150,000 <span>/ year</span></p>
+              <p>Grow engagement with added learning and promotion.</p>
+              <a class="membership-info-link" href="#silver-details">View Silver benefits</a>
+            </article>
+            <article class="membership-card surface membership-card--gold">
+              <h3>Gold Membership</h3>
+              <p class="membership-price">₦300,000 <span>/ year</span></p>
+              <p>Access premium visibility and event opportunities.</p>
+              <a class="membership-info-link" href="#gold-details">View Gold benefits</a>
+            </article>
+          </div>
+          <p class="membership-disclaimer">
+            Membership fees and benefits shown are illustrative for this
+            coursework project and are not official NACCIMA offers.
+          </p>
+        </aside>
+      </section>
+
+      <dialog class="membership-dialog" id="np-details" aria-labelledby="np-dialog-heading">
+        <div class="membership-dialog__header">
+          <h2 id="np-dialog-heading">NP Membership benefits</h2>
+          <button class="dialog-close" type="button" aria-label="Close NP membership details">×</button>
+        </div>
+        <p>Designed for nonprofit organizations contributing to their communities.</p>
+        <ul>
+          <li>No annual membership fee.</li>
+          <li>Attend selected networking events at no charge.</li>
+          <li>Access member learning resources and community updates.</li>
+        </ul>
+      </dialog>
+
+      <dialog class="membership-dialog" id="bronze-details" aria-labelledby="bronze-dialog-heading">
+        <div class="membership-dialog__header">
+          <h2 id="bronze-dialog-heading">Bronze Membership benefits</h2>
+          <button class="dialog-close" type="button" aria-label="Close Bronze membership details">×</button>
+        </div>
+        <p>A practical starting point for organizations building new business connections.</p>
+        <ul>
+          <li>Member directory listing.</li>
+          <li>Invitations to networking events.</li>
+          <li>Discounted registration for selected workshops.</li>
+        </ul>
+      </dialog>
+
+      <dialog class="membership-dialog" id="silver-details" aria-labelledby="silver-dialog-heading">
+        <div class="membership-dialog__header">
+          <h2 id="silver-dialog-heading">Silver Membership benefits</h2>
+          <button class="dialog-close" type="button" aria-label="Close Silver membership details">×</button>
+        </div>
+        <p>For growing organizations looking for more ways to learn and be seen.</p>
+        <ul>
+          <li>All Bronze benefits.</li>
+          <li>Priority access to selected training sessions.</li>
+          <li>Eligibility for a rotating website business spotlight.</li>
+          <li>Additional event registration discounts.</li>
+        </ul>
+      </dialog>
+
+      <dialog class="membership-dialog" id="gold-details" aria-labelledby="gold-dialog-heading">
+        <div class="membership-dialog__header">
+          <h2 id="gold-dialog-heading">Gold Membership benefits</h2>
+          <button class="dialog-close" type="button" aria-label="Close Gold membership details">×</button>
+        </div>
+        <p>Enhanced engagement for organizations seeking broader visibility.</p>
+        <ul>
+          <li>All Silver benefits.</li>
+          <li>Featured placement in selected member promotions.</li>
+          <li>Complimentary entry to selected premium events.</li>
+          <li>Priority consideration for a website business spotlight.</li>
+        </ul>
+      </dialog>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <section class="footer-contact" aria-labelledby="contact-heading">
+          <a class="brand brand--footer" href="index.html">
+            <img src="images/brand-mark.svg" alt="" width="42" height="42">
+            <span class="brand__name">Nigeria <span>Chamber Directory</span></span>
+          </a>
+          <h2 id="contact-heading">NACCIMA National Secretariat</h2>
+          <address>
+            8A Oba Akinjobi Way, Ikeja GRA<br>
+            Lagos, Nigeria<br>
+            <a href="tel:+2348118877562">+234 811 8877 562</a><br>
+            <a href="mailto:info@naccima.com">info@naccima.com</a>
+          </address>
+          <p class="footer-disclaimer">
+            Independent WDD 231 coursework demonstration; not an official NACCIMA website.
+          </p>
+        </section>
+        <section class="footer-project" aria-labelledby="project-heading">
+          <h2 id="project-heading">Project information</h2>
+          <p>Nsikak Asuquo</p>
+          <p>WDD 231 — Web Frontend Development I</p>
+          <p>© <span id="current-year"></span> Nsikak Asuquo</p>
+          <p>Last modified: <span id="last-modified">Loading date…</span></p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

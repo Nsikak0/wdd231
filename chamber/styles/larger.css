@@ -41,9 +41,39 @@
 
   .page-intro__inner,
   .directory-section,
+  .join-layout,
+  .confirmation-section,
   .home-hero__content,
   .home-content {
     width: min(100% - 3rem, 72rem);
+  }
+
+  .join-layout {
+    grid-template-columns: minmax(0, 1.2fr) minmax(15rem, 0.8fr);
+    align-items: start;
+    gap: 1.5rem;
+    padding-block: 2.75rem 3.5rem;
+  }
+
+  .application-panel {
+    padding: 1.5rem;
+  }
+
+  .membership-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .form-field--wide,
+  .form-submit {
+    grid-column: 1 / -1;
+  }
+
+  .membership-cards {
+    gap: 1rem;
+  }
+
+  .confirmation-section {
+    padding-block: 3rem 4rem;
   }
 
   .directory-heading {

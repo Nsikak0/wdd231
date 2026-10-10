@@ -1,0 +1,35 @@
+@media (min-width: 44rem) {
+  .site-header { padding-right: max(2rem, calc((100vw - 76rem) / 2)); padding-left: max(2rem, calc((100vw - 76rem) / 2)); }
+  .menu-toggle { display: none; }
+  .primary-navigation { position: static; display: block; padding: 0; }
+  .primary-navigation ul { flex-direction: row; align-items: center; gap: 0.25rem; }
+  .primary-navigation a { padding: 0.6rem 0.85rem; }
+  .hero { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); align-items: center; gap: 3rem; padding: 4rem max(2rem, calc((100vw - 76rem) / 2)); }
+  .hero__image img { min-height: 26rem; }
+  .intro-columns { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .feature-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; }
+  .visitor-guide { padding: 3rem max(2rem, calc((100vw - 76rem) / 2)); }
+  .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+  .context-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+  .footer-main { grid-template-columns: 1.5fr 0.8fr 1fr; gap: 2.5rem; }
+  .primary-navigation ul, .footer-main ul { flex-direction: row; }
+  .footer-main ul { flex-direction: column; }
+  .filters { grid-template-columns: minmax(12rem, 1fr) minmax(12rem, 1fr) auto; align-items: end; gap: 1rem; }
+  .places-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+  .place-card { display: grid; grid-template-columns: minmax(8rem, 0.72fr) minmax(0, 1.28fr); }
+  .place-card__image { min-height: 100%; }
+  .place-card__image img { height: 100%; min-height: 100%; aspect-ratio: auto; }
+  .place-card__content { display: flex; flex-direction: column; align-items: start; }
+  .place-card__actions { width: 100%; margin-top: auto; padding-top: 0.5rem; }
+  .plan-layout { grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr); gap: 1.3rem; }
+  .form-grid { grid-template-columns: 1fr 1fr; }
+  .form-grid__wide { grid-column: 1 / -1; }
+  .form-submit { width: auto; }
+  .confirmation-list { grid-template-columns: 11rem 1fr; gap: 0.65rem 1rem; }
+  .confirmation-list dd { margin: 0; }
+}
+
+@media (min-width: 68rem) {
+  .places-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .place-card { grid-template-columns: minmax(11rem, 0.78fr) minmax(0, 1.22fr); }
+}

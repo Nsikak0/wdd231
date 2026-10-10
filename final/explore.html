@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Browse 15 destinations and experiences across Akwa Ibom State, Nigeria, and save places to your travel shortlist.">
+    <meta name="author" content="Nsikak Asuquo">
+    <meta property="og:title" content="Explore places | Explore Akwa Ibom">
+    <meta property="og:description" content="Filter coast, culture, history and city destinations around Akwa Ibom.">
+    <meta property="og:image" content="https://nsikak0.github.io/wdd231/final/images/destinations/hero-ibeno.jpg">
+    <meta property="og:url" content="https://nsikak0.github.io/wdd231/final/explore.html">
+    <meta property="og:type" content="website">
+    <title>Explore destinations | Explore Akwa Ibom</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script type="module" src="scripts/explore.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html"><img src="images/favicon.svg" alt="" width="44" height="44"><span>Explore <strong>Akwa Ibom</strong></span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation"><span class="menu-toggle__icon" aria-hidden="true"></span></button>
+      <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation"><ul><li><a href="index.html">Home</a></li><li><a href="explore.html" aria-current="page">Explore</a></li><li><a href="plan.html">Plan your visit <span class="nav-count" id="saved-count">0</span></a></li></ul></nav>
+    </header>
+    <main id="main-content">
+      <section class="page-banner"><p class="eyebrow">Coastal places and city stories</p><h1>Explore Akwa Ibom</h1><p>Browse a starter collection of destinations and experiences inspired by the supplied tourism report. Confirm current details and access locally before travelling.</p></section>
+      <section class="explore-section" aria-labelledby="places-heading">
+        <div class="section-heading"><p class="eyebrow">Build a shortlist</p><h2 id="places-heading">Places to begin with</h2><p>Each guide card includes location, context, a practical note and suggested time. Suggestions are planning estimates, not official opening hours.</p></div>
+        <form class="filters" aria-label="Filter destinations">
+          <label>Type of place<select id="category-filter"></select></label>
+          <label>Area<select id="region-filter"></select></label>
+          <p id="result-count" class="filter-count" aria-live="polite">Loading destination count…</p>
+        </form>
+        <p id="places-status" class="status-message" role="status" aria-live="polite">Loading destinations…</p>
+        <div class="places-grid" id="places-grid"></div>
+      </section>
+      <dialog class="place-dialog" id="place-dialog" aria-labelledby="dialog-title">
+        <div class="dialog-heading"><h2 id="dialog-title"></h2><button class="dialog-close" type="button" aria-label="Close destination details">×</button></div>
+        <div id="dialog-body" class="dialog-body"></div>
+      </dialog>
+      <section class="source-note"><p>Descriptions are concise visitor introductions, not official venue information. Follow the source link on each destination and confirm current arrangements before a visit.</p></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-main"><div><a class="brand brand--footer" href="index.html"><img src="images/favicon.svg" alt="" width="40" height="40"><span>Explore <strong>Akwa Ibom</strong></span></a><p>An independent student-created visitor guide.</p></div><div><h2>Explore</h2><ul><li><a href="index.html">Home</a></li><li><a href="plan.html">Plan a visit</a></li><li><a href="attributions.html">Sources and attributions</a></li></ul></div><div><h2>Project</h2><p>Created by Nsikak Asuquo</p><p>© <span id="current-year"></span> Nsikak Asuquo</p><p>Last modified: <span id="last-modified"></span></p></div></div>
+      <p class="footer-note">Site sources and image credits are listed on the attribution page.</p>
+    </footer>
+  </body>
+</html>

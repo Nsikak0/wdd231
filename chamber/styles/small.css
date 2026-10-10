@@ -214,9 +214,17 @@ button:focus-visible {
   line-height: 1.12;
 }
 
+.page-intro__heading {
+  margin-top: 0.8rem;
+  color: #e0c577;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(1.15rem, 4vw, 1.5rem);
+  font-weight: 700;
+}
+
 .page-intro__text {
   max-width: 37rem;
-  margin-top: 0.8rem;
+  margin-top: 0.35rem;
   color: #e3e9e7;
   font-size: 1.05rem;
 }
@@ -303,6 +311,17 @@ button:focus-visible {
   color: var(--muted);
   font-size: 0.9rem;
   font-weight: 600;
+}
+
+.member-listing {
+  margin-top: 1.5rem;
+}
+
+.member-listing h2 {
+  margin-bottom: 0.65rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
 }
 
 .member-directory {

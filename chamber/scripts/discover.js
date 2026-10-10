@@ -6,8 +6,8 @@ const visitMessage = document.querySelector("#visit-message");
 const placeDialog = document.querySelector("#place-dialog");
 const dialogHeading = document.querySelector("#place-dialog-heading");
 const dialogDetails = document.querySelector("#place-dialog-details");
-const placeSource = document.querySelector("#place-source");
-const imageSource = document.querySelector("#image-source");
+const placeSourceContainer = document.querySelector("#place-source");
+const imageSourceContainer = document.querySelector("#image-source");
 const currentYear = document.querySelector("#current-year");
 const lastModified = document.querySelector("#last-modified");
 const menuButton = document.querySelector(".menu-toggle");
@@ -67,8 +67,12 @@ function createPlaceCard(place, index) {
   button.addEventListener("click", () => {
     dialogHeading.textContent = place.title;
     dialogDetails.textContent = place.details;
-    placeSource.href = place.sourceUrl;
-    imageSource.href = place.imageSource;
+    placeSourceContainer.replaceChildren(
+      createSourceLink(place.sourceUrl, "Read more about this place"),
+    );
+    imageSourceContainer.replaceChildren(
+      createSourceLink(place.imageSource, "Image source"),
+    );
     dialogOpeners.set(placeDialog, button);
     placeDialog.showModal();
     placeDialog.querySelector(".dialog-close").focus();
@@ -76,6 +80,15 @@ function createPlaceCard(place, index) {
 
   card.append(heading, figure, address, description, button);
   return card;
+}
+
+function createSourceLink(url, text) {
+  const link = document.createElement("a");
+  link.href = url;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.textContent = text;
+  return link;
 }
 
 function closeMenu() {

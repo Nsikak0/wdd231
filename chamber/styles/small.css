@@ -179,8 +179,8 @@ button:focus-visible {
 
 .primary-navigation a:hover,
 .primary-navigation a[aria-current="page"] {
-  color: #f0d78e;
-  background: rgb(255 255 255 / 10%);
+  color: var(--white);
+  background: var(--navy-soft);
 }
 
 .page-intro {
@@ -188,6 +188,7 @@ button:focus-visible {
   background:
     radial-gradient(ellipse at 88% 35%, rgb(20 99 76 / 48%), transparent 34%),
     linear-gradient(110deg, var(--navy), var(--navy-soft));
+  background-color: var(--navy);
 }
 
 .page-intro__inner {

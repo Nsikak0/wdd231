@@ -2,21 +2,34 @@
   color-scheme: light;
   --navy: #0c1923;
   --navy-soft: #162a36;
+  --navy-overlay: #0c1923eb;
   --green: #14634c;
+  --green-overlay: #14634c7a;
   --green-dark: #0d4f3b;
   --green-light: #eaf2ed;
   --gold: #d4ae58;
+  --gold-light: #f1d688;
+  --gold-dark: #70520d;
+  --silver: #87969d;
   --paper: #f6f7f4;
   --white: #fff;
   --ink: #17242c;
   --muted: #5d6b71;
   --line: #dce2de;
-  --shadow: 0 0.45rem 1.4rem rgb(12 25 35 / 8%);
+  --white-40: #fff6;
+  --slate-soft: #e9edef;
+  --slate-dark: #48545b;
+  --gold-soft: #f7edcf;
+  --footer-subtle: #aebcb8;
+  --error: #842727;
+  --error-border: #d7a5a5;
+  --error-surface: #fff0f0;
+  --transparent: #0000;
+  --shadow: 0 0.45rem 1.4rem #0c192314;
   font-family: "DM Sans", sans-serif;
   color: var(--ink);
   background: var(--paper);
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -24,14 +37,25 @@ body {
   line-height: 1.6;
 }
 
+:is(h1, h2, h3, h4) {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+}
+
 a {
   color: inherit;
 }
 
-a:focus-visible,
-button:focus-visible {
+:is(a, button):focus-visible {
   outline: 3px solid var(--gold);
   outline-offset: 3px;
+}
+
+.surface {
+  border: 1px solid var(--line);
+  border-radius: 0.55rem;
+  background: var(--white);
+  box-shadow: var(--shadow);
 }
 
 .skip-link {
@@ -88,7 +112,7 @@ button:focus-visible {
 
 .brand__name span {
   display: block;
-  color: #d8c181;
+  color: var(--gold-light);
   font-size: 0.76rem;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -100,10 +124,10 @@ button:focus-visible {
   height: 2.75rem;
   flex: 0 0 auto;
   place-items: center;
-  border: 1px solid rgb(255 255 255 / 40%);
+  border: 1px solid var(--white-40);
   border-radius: 0.35rem;
   color: var(--white);
-  background: transparent;
+  background: var(--transparent);
   cursor: pointer;
 }
 
@@ -115,7 +139,7 @@ button:focus-visible {
   width: 1.3rem;
   height: 2px;
   border-radius: 2px;
-  background: currentColor;
+  background: var(--white);
 }
 
 .menu-toggle__icon::before,
@@ -134,7 +158,7 @@ button:focus-visible {
 }
 
 .menu-toggle[aria-expanded="true"] .menu-toggle__icon {
-  background: transparent;
+  background: var(--transparent);
 }
 
 .menu-toggle[aria-expanded="true"] .menu-toggle__icon::before {
@@ -177,8 +201,7 @@ button:focus-visible {
   transition: background-color 160ms ease, color 160ms ease;
 }
 
-.primary-navigation a:hover,
-.primary-navigation a[aria-current="page"] {
+.primary-navigation a:is(:hover, [aria-current="page"]) {
   color: var(--white);
   background: var(--navy-soft);
 }
@@ -186,9 +209,13 @@ button:focus-visible {
 .page-intro {
   color: var(--white);
   background:
-    radial-gradient(ellipse at 88% 35%, rgb(20 99 76 / 48%), transparent 34%),
+    radial-gradient(ellipse at 88% 35%, var(--green-overlay), var(--transparent) 34%),
     linear-gradient(110deg, var(--navy), var(--navy-soft));
   background-color: var(--navy);
+}
+
+.page-intro .eyebrow {
+  color: var(--gold-light);
 }
 
 .page-intro__inner {
@@ -199,7 +226,7 @@ button:focus-visible {
 
 .eyebrow {
   margin-bottom: 0.55rem;
-  color: #e0c577;
+  color: var(--gold-dark);
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -208,16 +235,13 @@ button:focus-visible {
 
 .page-intro h1 {
   max-width: 18ch;
-  font-family: "Manrope", sans-serif;
   font-size: clamp(2rem, 8vw, 3.5rem);
-  font-weight: 800;
   line-height: 1.12;
 }
 
 .page-intro__heading {
   margin-top: 0.8rem;
-  color: #e0c577;
-  font-family: "Manrope", sans-serif;
+  color: var(--gold-light);
   font-size: clamp(1.15rem, 4vw, 1.5rem);
   font-weight: 700;
 }
@@ -225,7 +249,7 @@ button:focus-visible {
 .page-intro__text {
   max-width: 37rem;
   margin-top: 0.35rem;
-  color: #e3e9e7;
+  color: var(--white);
   font-size: 1.05rem;
 }
 
@@ -249,9 +273,7 @@ button:focus-visible {
 }
 
 .directory-heading h2 {
-  font-family: "Manrope", sans-serif;
   font-size: clamp(1.55rem, 5vw, 2rem);
-  font-weight: 800;
   line-height: 1.25;
 }
 
@@ -283,26 +305,21 @@ button:focus-visible {
   border: 0;
   border-radius: 0.3rem;
   color: var(--muted);
-  background: transparent;
+  background: var(--transparent);
   font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
   transition: color 160ms ease, background-color 160ms ease;
 }
 
+.view-button:is(.is-active, :hover) {
+  color: var(--white);
+  background: var(--green);
+}
+
 .view-button svg {
   width: 1.1rem;
   height: 1.1rem;
-  fill: currentColor;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-width: 1.8;
-}
-
-.view-button.is-active,
-.view-button:hover {
-  color: var(--white);
-  background: var(--green);
 }
 
 .directory-status {
@@ -319,9 +336,7 @@ button:focus-visible {
 
 .member-listing h2 {
   margin-bottom: 0.65rem;
-  font-family: "Manrope", sans-serif;
   font-size: 1.35rem;
-  font-weight: 800;
 }
 
 .member-directory {
@@ -336,10 +351,6 @@ button:focus-visible {
   flex-direction: column;
   align-items: center;
   padding: 1.25rem;
-  border: 1px solid var(--line);
-  border-radius: 0.55rem;
-  background: var(--white);
-  box-shadow: var(--shadow);
   text-align: center;
 }
 
@@ -348,16 +359,13 @@ button:focus-visible {
   height: 5rem;
   flex: 0 0 auto;
   margin-bottom: 0.8rem;
-  border: 1px solid #edf0ed;
+  border: 1px solid var(--line);
   border-radius: 0.45rem;
-  background: var(--white);
   object-fit: contain;
 }
 
 .member-card h3 {
-  font-family: "Manrope", sans-serif;
   font-size: 1.12rem;
-  font-weight: 800;
   line-height: 1.35;
 }
 
@@ -379,12 +387,17 @@ button:focus-visible {
   justify-items: center;
   gap: 0.35rem;
   margin-top: 0.8rem;
+}
+
+.member-card__details,
+.spotlight-card__details {
   color: var(--muted);
   font-size: 0.87rem;
   overflow-wrap: anywhere;
 }
 
-.member-card__details a {
+:is(.member-card__details, .spotlight-card__details) a,
+.text-link {
   color: var(--green-dark);
   font-weight: 700;
   text-decoration-thickness: 1px;
@@ -402,13 +415,16 @@ button:focus-visible {
 }
 
 .member-card[data-level="2"] .member-card__level {
-  color: #48545b;
-  background: #e9edef;
+  color: var(--slate-dark);
+  background: var(--slate-soft);
 }
 
-.member-card[data-level="3"] .member-card__level {
-  color: #70520d;
-  background: #f7edcf;
+:is(
+  .member-card[data-level="3"] .member-card__level,
+  .spotlight-card[data-level="3"] .spotlight-card__level
+) {
+  color: var(--gold-dark);
+  background: var(--gold-soft);
 }
 
 .member-directory--list {
@@ -445,9 +461,11 @@ button:focus-visible {
   margin: 0;
 }
 
-.member-directory--list .member-card__description,
-.member-directory--list .member-card__details,
-.member-directory--list .member-card__level {
+.member-directory--list :is(
+  .member-card__description,
+  .member-card__details,
+  .member-card__level
+) {
   margin-top: 0;
 }
 
@@ -462,10 +480,10 @@ button:focus-visible {
 .directory-error {
   grid-column: 1 / -1;
   padding: 1rem;
-  border: 1px solid #d7a5a5;
+  border: 1px solid var(--error-border);
   border-radius: 0.4rem;
-  color: #842727;
-  background: #fff0f0;
+  color: var(--error);
+  background: var(--error-surface);
 }
 
 .home-hero {
@@ -476,18 +494,6 @@ button:focus-visible {
   overflow: hidden;
   color: var(--white);
   background: var(--navy);
-}
-
-.home-hero::after {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgb(12 25 35 / 92%) 0%,
-    rgb(12 25 35 / 75%) 56%,
-    rgb(12 25 35 / 14%) 100%
-  );
-  content: "";
 }
 
 .home-hero__image {
@@ -503,26 +509,25 @@ button:focus-visible {
   z-index: 1;
   width: min(100% - 2rem, 72rem);
   margin-inline: auto;
-  padding-block: 3rem;
+  padding: 1.5rem;
+  border-radius: 0.55rem;
+  background: var(--navy-overlay);
 }
 
 .home-hero__content .eyebrow {
-  color: #f1d688;
+  color: var(--gold-light);
 }
 
 .home-hero h1 {
   max-width: 13ch;
-  font-family: "Manrope", sans-serif;
   font-size: clamp(2rem, 8vw, 4rem);
-  font-weight: 800;
   line-height: 1.08;
 }
 
 .home-hero h2 {
   max-width: 32rem;
   margin-top: 0.9rem;
-  color: #f0d78e;
-  font-family: "Manrope", sans-serif;
+  color: var(--gold-light);
   font-size: clamp(1.05rem, 4vw, 1.4rem);
   font-weight: 700;
   line-height: 1.4;
@@ -531,7 +536,7 @@ button:focus-visible {
 .home-hero__content > p:not(.eyebrow) {
   max-width: 35rem;
   margin-top: 0.45rem;
-  color: #f0f3f1;
+  color: var(--white);
   font-size: 1rem;
 }
 
@@ -542,7 +547,7 @@ button:focus-visible {
   justify-content: center;
   margin-top: 1.25rem;
   padding: 0.7rem 1.2rem;
-  border: 2px solid transparent;
+  border: 2px solid var(--transparent);
   border-radius: 0.35rem;
   font-weight: 700;
   text-decoration: none;
@@ -555,11 +560,7 @@ button:focus-visible {
 
 .button--gold {
   color: var(--navy);
-  background: #f1d688;
-}
-
-.button--gold:hover {
-  background: #ffdf91;
+  background: var(--gold-light);
 }
 
 .home-content {
@@ -573,22 +574,14 @@ button:focus-visible {
 .home-panel {
   min-width: 0;
   padding: 1.2rem;
-  border: 1px solid var(--line);
-  border-radius: 0.55rem;
-  background: var(--white);
-  box-shadow: var(--shadow);
 }
 
-.home-panel h2,
-.spotlights-heading h2 {
-  font-family: "Manrope", sans-serif;
+:is(.home-panel, .spotlights-heading) h2 {
   font-size: clamp(1.45rem, 5vw, 1.9rem);
-  font-weight: 800;
   line-height: 1.25;
 }
 
-.events-panel > .eyebrow,
-.weather-panel > .eyebrow {
+.home-panel > .eyebrow {
   margin-bottom: 0.35rem;
 }
 
@@ -629,13 +622,11 @@ button:focus-visible {
 
 .event-date--gold {
   color: var(--navy);
-  background: #f1d688;
+  background: var(--gold-light);
 }
 
 .event-item h3 {
-  font-family: "Manrope", sans-serif;
   font-size: 1rem;
-  font-weight: 800;
   line-height: 1.35;
 }
 
@@ -694,9 +685,7 @@ button:focus-visible {
 
 .forecast-heading {
   margin-top: 1rem;
-  font-family: "Manrope", sans-serif;
   font-size: 1rem;
-  font-weight: 800;
 }
 
 .weather-forecast {
@@ -743,10 +732,7 @@ button:focus-visible {
   color: var(--green-dark);
 }
 
-.weather-status,
-.weather-error,
-.spotlight-status,
-.spotlight-error {
+:is(.weather-status, .weather-error, .spotlight-status, .spotlight-error) {
   color: var(--muted);
   font-size: 0.9rem;
 }
@@ -756,8 +742,8 @@ button:focus-visible {
   grid-column: 1 / -1;
   padding: 0.8rem;
   border-radius: 0.35rem;
-  color: #842727;
-  background: #fff0f0;
+  color: var(--error);
+  background: var(--error-surface);
 }
 
 .spotlights-section {
@@ -777,10 +763,7 @@ button:focus-visible {
 }
 
 .text-link {
-  color: var(--green-dark);
   font-size: 0.9rem;
-  font-weight: 700;
-  text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
 }
 
@@ -796,15 +779,11 @@ button:focus-visible {
   grid-template-columns: 4rem minmax(0, 1fr);
   gap: 0.65rem 0.85rem;
   padding: 1rem;
-  border: 1px solid var(--line);
   border-top: 0.25rem solid var(--gold);
-  border-radius: 0.5rem;
-  background: var(--white);
-  box-shadow: var(--shadow);
 }
 
 .spotlight-card[data-level="2"] {
-  border-top-color: #87969d;
+  border-top-color: var(--silver);
 }
 
 .spotlight-card__logo {
@@ -827,9 +806,7 @@ button:focus-visible {
 }
 
 .spotlight-card h3 {
-  font-family: "Manrope", sans-serif;
   font-size: 1rem;
-  font-weight: 800;
   line-height: 1.35;
   overflow-wrap: anywhere;
 }
@@ -845,34 +822,20 @@ button:focus-visible {
   grid-column: 1 / -1;
   justify-items: start;
   gap: 0.3rem;
-  color: var(--muted);
   font-size: 0.82rem;
-  overflow-wrap: anywhere;
-}
-
-.spotlight-card__details a {
-  color: var(--green-dark);
-  font-weight: 700;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.15em;
 }
 
 .spotlight-card__level {
   padding: 0.15rem 0.55rem;
   border-radius: 999px;
-  color: #48545b;
-  background: #e9edef;
+  color: var(--slate-dark);
+  background: var(--slate-soft);
   font-size: 0.75rem;
   font-weight: 700;
 }
 
-.spotlight-card[data-level="3"] .spotlight-card__level {
-  color: #70520d;
-  background: #f7edcf;
-}
-
 .site-footer {
-  color: #f3f5f2;
+  color: var(--white);
   background: var(--navy);
 }
 
@@ -892,24 +855,20 @@ button:focus-visible {
   font-size: 0.98rem;
 }
 
-.footer-contact h2,
-.footer-project h2 {
+.footer-inner h2 {
   margin-bottom: 0.55rem;
-  color: #e2cb84;
-  font-family: "Manrope", sans-serif;
+  color: var(--gold-light);
   font-size: 1.05rem;
-  font-weight: 800;
 }
 
-.footer-contact address,
-.footer-project p {
-  color: #d3dcda;
+:is(.footer-contact address, .footer-project p) {
+  color: var(--white);
   font-size: 0.9rem;
   line-height: 1.8;
 }
 
 .footer-contact address a {
-  color: #f3f5f2;
+  color: var(--white);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.15em;
 }
@@ -917,7 +876,7 @@ button:focus-visible {
 .footer-disclaimer {
   max-width: 31rem;
   margin-top: 0.8rem;
-  color: #aebcb8;
+  color: var(--footer-subtle);
   font-size: 0.8rem;
 }
 

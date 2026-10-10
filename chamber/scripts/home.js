@@ -162,7 +162,7 @@ async function loadWeather() {
 
 function createSpotlight(member) {
   const card = document.createElement("article");
-  card.className = "spotlight-card";
+  card.className = "spotlight-card surface";
   card.dataset.level = String(member.membershipLevel);
 
   const logo = document.createElement("img");

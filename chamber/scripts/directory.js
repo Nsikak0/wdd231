@@ -21,7 +21,7 @@ function makeTextElement(tagName, className, text) {
 
 function makeMemberCard(member) {
   const card = document.createElement("article");
-  card.className = "member-card";
+  card.className = "member-card surface";
   card.dataset.level = String(member.membershipLevel);
 
   const logo = document.createElement("img");

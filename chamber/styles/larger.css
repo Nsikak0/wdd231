@@ -126,6 +126,41 @@
   }
 }
 
+@media (min-width: 40.0625rem) {
+  .discover-content {
+    width: min(100% - 3rem, 72rem);
+    padding-block: 2.75rem 3.5rem;
+  }
+
+  .discover-heading {
+    grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.8fr);
+    align-items: end;
+    gap: 1.5rem;
+  }
+
+  .discover-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "place-1 place-1"
+      "place-2 place-3"
+      "place-4 place-4"
+      "place-5 place-6"
+      "place-7 place-8";
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 64.0625rem) {
+  .discover-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-areas:
+      "place-1 place-1 place-2 place-3"
+      "place-4 place-5 place-5 place-6"
+      "place-7 place-7 place-8 place-8";
+    gap: 1.5rem;
+  }
+}
+
 @media (min-width: 68rem) {
   .member-directory--grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));

@@ -7,7 +7,7 @@
     "image": "lagos-meridian.svg",
     "membershipLevel": 3,
     "industry": "Agriculture & Food",
-    "description": "A sample food processing and regional produce distribution company."
+    "description": "This fictional Lagos business processes food and distributes produce to buyers in the region."
   },
   {
     "name": "Abuja GreenBuild Partners",
@@ -17,7 +17,7 @@
     "image": "abuja-greenbuild.svg",
     "membershipLevel": 2,
     "industry": "Construction",
-    "description": "A sample building consultancy focused on efficient commercial spaces."
+    "description": "This fictional Abuja consultancy helps clients plan practical, energy-conscious commercial spaces."
   },
   {
     "name": "Kano Heritage Textiles",
@@ -27,7 +27,7 @@
     "image": "kano-heritage.svg",
     "membershipLevel": 1,
     "industry": "Manufacturing",
-    "description": "A sample textile maker connecting local craft with modern production."
+    "description": "This fictional Kano maker brings local textile traditions into a modern production setting."
   },
   {
     "name": "Port Harcourt Bluewater Logistics",
@@ -37,7 +37,7 @@
     "image": "bluewater-logistics.svg",
     "membershipLevel": 3,
     "industry": "Transport & Logistics",
-    "description": "A sample freight and supply-chain services company serving the coast."
+    "description": "This fictional Port Harcourt company handles freight and supply-chain services for coastal businesses."
   },
   {
     "name": "Enugu Coal City Digital",
@@ -47,7 +47,7 @@
     "image": "coal-city-digital.svg",
     "membershipLevel": 2,
     "industry": "Technology",
-    "description": "A sample digital studio supporting growing Nigerian enterprises."
+    "description": "This fictional Enugu studio builds digital services for Nigerian businesses that are ready to grow."
   },
   {
     "name": "Ibadan OyoWorks Advisory",
@@ -57,7 +57,7 @@
     "image": "oyoworks-advisory.svg",
     "membershipLevel": 1,
     "industry": "Business Services",
-    "description": "A sample business advisory helping small firms plan and grow."
+    "description": "This fictional Ibadan advisory works with small businesses on planning and day-to-day decisions."
   },
   {
     "name": "Calabar CrossRiver EcoTours",
@@ -67,6 +67,6 @@
     "image": "ecotours-calabar.svg",
     "membershipLevel": 2,
     "industry": "Tourism & Hospitality",
-    "description": "A sample hospitality operator promoting responsible local tourism."
+    "description": "This fictional Calabar tour operator introduces visitors to local attractions with a focus on responsible tourism."
   }
 ]

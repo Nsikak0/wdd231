@@ -5,7 +5,6 @@
     "phone": "+234 800 000 0101",
     "website": "https://example.com/",
     "image": "lagos-meridian.svg",
-    "alt": "Company logo featuring agricultural imagery and stylized produce elements",
     "membershipLevel": 3,
     "industry": "Agriculture & Food",
     "description": "A regional food processor and distributor working with local producers to bring fresh and processed agricultural goods to buyers across Lagos and beyond."
@@ -16,7 +15,6 @@
     "phone": "+234 800 000 0102",
     "website": "https://example.com/",
     "image": "abuja-greenbuild.svg",
-    "alt": "Company logo with green architectural and sustainability design elements",
     "membershipLevel": 2,
     "industry": "Construction",
     "description": "A consultancy firm specializing in sustainable building design and energy-efficient commercial architecture for clients throughout the Abuja region."
@@ -27,7 +25,6 @@
     "phone": "+234 800 000 0103",
     "website": "https://example.com/",
     "image": "kano-heritage.svg",
-    "alt": "Logo featuring traditional textile patterns and weaving motifs",
     "membershipLevel": 1,
     "industry": "Manufacturing",
     "description": "Combining heritage textile techniques with modern manufacturing, this Kano producer creates quality fabrics that honor traditional craftsmanship."
@@ -38,7 +35,6 @@
     "phone": "+234 800 000 0104",
     "website": "https://example.com/",
     "image": "bluewater-logistics.svg",
-    "alt": "Company logo incorporating water and transportation or cargo imagery",
     "membershipLevel": 3,
     "industry": "Transport & Logistics",
     "description": "Based in Port Harcourt's strategic location, this logistics company manages freight, warehousing, and supply-chain services for regional and coastal businesses."
@@ -49,7 +45,6 @@
     "phone": "+234 800 000 0105",
     "website": "https://example.com/",
     "image": "coal-city-digital.svg",
-    "alt": "Logo with digital technology and innovation-focused design elements",
     "membershipLevel": 2,
     "industry": "Technology",
     "description": "An Enugu-based digital services studio helping Nigerian businesses build web platforms, mobile applications, and digital infrastructure for growth."
@@ -60,7 +55,6 @@
     "phone": "+234 800 000 0106",
     "website": "https://example.com/",
     "image": "oyoworks-advisory.svg",
-    "alt": "Business advisory firm logo with professional and consultancy design",
     "membershipLevel": 1,
     "industry": "Business Services",
     "description": "An Ibadan-based advisory firm supporting small and growing businesses with strategy, planning, and operational guidance."
@@ -71,7 +65,6 @@
     "phone": "+234 800 000 0107",
     "website": "https://example.com/",
     "image": "ecotours-calabar.svg",
-    "alt": "Tourism company logo featuring nature and ecological travel imagery",
     "membershipLevel": 2,
     "industry": "Tourism & Hospitality",
     "description": "A Calabar tour operator connecting visitors with the region's natural attractions and cultural sites through responsible and sustainable travel experiences."

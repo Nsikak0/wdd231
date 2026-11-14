@@ -3,10 +3,10 @@ const attractions = [
     id: "lekki-conservation-centre",
     title: "Lekki Conservation Centre",
     image: "lekki-conservation-centre.webp",
-    alt: "Wooded forest pathway with natural lighting filtering through tree canopy",
+    alt: "Wooden boardwalk pathway through forest canopy with natural sunlight",
     address: "Km 20, Lekki-Epe Expressway, Lekki, Lagos",
     description:
-      "Escape into Lagos's protected nature reserve where forest trails wind through dense greenery and a canopy walkway offers elevated wildlife viewing on the Lekki Peninsula.",
+      "A nature reserve on the Lekki Peninsula with forest trails and a canopy walkway above the tree line offering views of local wildlife and vegetation.",
     details:
       "The reserve offers a green escape within the Lagos metropolitan area. Check the centre's current visitor information before travelling, as access and activities may change.",
     sourceUrl: "https://en.wikipedia.org/wiki/Lekki_Conservation_Centre",
@@ -17,10 +17,10 @@ const attractions = [
     id: "nike-art-gallery",
     title: "Nike Art Gallery",
     image: "nike-art-gallery.webp",
-    alt: "Multi-story building exterior with distinct architectural elements",
+    alt: "Multi-level gallery building exterior in central Lagos commercial area",
     address: "2 Nike Art Gallery Road, Lekki Phase 1, Lagos",
     description:
-      "Discover Nigerian contemporary art, traditional crafts, and textiles across multiple gallery floors showcasing local and regional artists in central Lekki.",
+      "An art gallery in Lekki showcasing works by Nigerian artists, including contemporary paintings, sculptures, traditional textiles, and crafts across multiple floors.",
     details:
       "The gallery is a cultural destination in Lekki. Confirm opening hours and visitor arrangements directly before planning a visit.",
     sourceUrl: "https://en.wikipedia.org/wiki/Nike_Art_Gallery",
@@ -31,10 +31,10 @@ const attractions = [
     id: "freedom-park",
     title: "Freedom Park",
     image: "freedom-park.webp",
-    alt: "Serene pond with landscaped grounds and open green spaces",
+    alt: "Landscaped park grounds with central pond surrounded by green spaces and trees",
     address: "1 Hospital Road, Lagos Island, Lagos",
     description:
-      "Built on the grounds of a colonial-era prison, Freedom Park now hosts cultural performances, art installations, and community events in a peaceful Lagos Island setting.",
+      "Built on the site of a former colonial-era prison, Freedom Park now serves as a public cultural and recreation space hosting performances, art installations, and community gatherings.",
     details:
       "Freedom Park hosts cultural activities, performances and events. Check current park access and event schedules before visiting.",
     sourceUrl: "https://en.wikipedia.org/wiki/Freedom_Park_(Lagos)",
@@ -45,10 +45,10 @@ const attractions = [
     id: "badagry-heritage-museum",
     title: "Badagry Heritage Museum",
     image: "badagry-heritage-museum.webp",
-    alt: "Colonial-era museum building set in historic coastal town setting",
+    alt: "Single-story stone building in historic Badagry coastal town",
     address: "Akran Avenue, Badagry, Lagos State",
     description:
-      "In Nigeria's historic coastal town of Badagry, this museum preserves and tells the stories of local heritage, maritime history, and the experiences that shaped the region.",
+      "A museum in Badagry, a historic coastal town, with exhibits documenting local heritage, maritime history, and regional cultural traditions.",
     details:
       "Badagry's museums and heritage sites provide context for the town's role in regional and global history. Verify opening arrangements before travel.",
     sourceUrl: "https://en.wikipedia.org/wiki/Badagry_Heritage_Museum",
@@ -59,10 +59,10 @@ const attractions = [
     id: "national-museum-lagos",
     title: "National Museum, Lagos",
     image: "national-museum-lagos.webp",
-    alt: "Classical museum facade with architectural detailing on Lagos Island",
+    alt: "Low-rise modernist building with facade facing street in Lagos Island district",
     address: "Onikan, Lagos Island, Lagos",
     description:
-      "Located in the Onikan district, Nigeria's National Museum houses collections spanning traditional art, archaeological artifacts, and cultural objects that represent the nation's heritage.",
+      "Nigeria's National Museum in the Onikan district houses collections of traditional art, archaeological finds, cultural artifacts, and displays on Nigerian heritage.",
     details:
       "The museum is located near other civic and cultural destinations on Lagos Island. Confirm current opening times and exhibits before visiting.",
     sourceUrl: "https://en.wikipedia.org/wiki/Nigerian_National_Museum",
@@ -73,10 +73,10 @@ const attractions = [
     id: "cathedral-church-of-christ",
     title: "Cathedral Church of Christ",
     image: "cathedral-church-of-christ.webp",
-    alt: "Interior architectural space with stone columns and ornate ceiling details",
+    alt: "Interior stone columns and arches supporting high vaulted ceiling space",
     address: "29 Marina Road, Lagos Island, Lagos",
     description:
-      "Standing on Lagos Island since the colonial period, this Anglican cathedral showcases Gothic Revival architecture with soaring ceilings, intricate stonework, and stained glass.",
+      "An Anglican cathedral on Lagos Island built in the colonial period with Gothic Revival architecture featuring stone columns, arched ceilings, and stained glass windows.",
     details:
       "The cathedral remains an active place of worship. Visitors should respect services and check access arrangements before arrival.",
     sourceUrl: "https://en.wikipedia.org/wiki/Cathedral_Church_of_Christ,_Lagos",
@@ -87,10 +87,10 @@ const attractions = [
     id: "third-mainland-bridge",
     title: "Third Mainland Bridge",
     image: "third-mainland-bridge.webp",
-    alt: "Aerial view of multi-lane bridge spanning lagoon with waterfront community",
+    alt: "Aerial view of long elevated highway bridge crossing lagoon with settlements below",
     address: "Oworonshoki to Adeniji Adele, Lagos",
     description:
-      "This iconic bridge carries traffic between the Lagos mainland and Lagos Island, dominating the skyline with its long, elevated structure crossing the lagoon.",
+      "A major elevated highway bridge connecting mainland Lagos at Oworonshoki to Lagos Island, dominating the lagoon landscape with its long concrete structure.",
     details:
       "The bridge is a vital transport route and a prominent part of Lagos's lagoon landscape. It is a public roadway, not a pedestrian attraction; use it only in accordance with traffic rules.",
     sourceUrl: "https://en.wikipedia.org/wiki/Third_Mainland_Bridge",
@@ -101,10 +101,10 @@ const attractions = [
     id: "lagos-city-hall",
     title: "Lagos City Hall",
     image: "lagos-city-hall.webp",
-    alt: "Historic civic building with distinctive architectural facade on Lagos Island",
+    alt: "1960s modernist concrete building with horizontal lines on Lagos Island street",
     address: "Catholic Mission Street, Lagos Island, Lagos",
     description:
-      "A landmark of Lagos's civic center, City Hall anchors the municipal administration area with its distinctive architecture near other important Lagos Island destinations.",
+      "A civic landmark on Lagos Island housing the municipal administration with mid-century modernist architecture characteristic of Nigerian government buildings from that era.",
     details:
       "City Hall is an architectural and civic point of interest near other Lagos Island landmarks. Check public access arrangements before visiting.",
     sourceUrl: "https://en.wikipedia.org/wiki/City_Hall,_Lagos",

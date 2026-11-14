@@ -40,7 +40,7 @@ function createPlaceCard(place, index) {
   const figure = document.createElement("figure");
   const image = document.createElement("img");
   image.src = `images/${place.image}`;
-  image.alt = place.title;
+  image.alt = place.alt;
   image.width = 250;
   image.height = 167;
   image.loading = "lazy";

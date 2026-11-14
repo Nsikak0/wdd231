@@ -1,16 +1,6 @@
 const memberDirectory = document.querySelector("#member-directory");
 const directoryStatus = document.querySelector("#directory-status");
 const viewButtons = document.querySelectorAll(".view-button");
-const currentYear = document.querySelector("#current-year");
-const lastModified = document.querySelector("#last-modified");
-
-if (currentYear) {
-  currentYear.textContent = String(new Date().getFullYear());
-}
-
-if (lastModified) {
-  lastModified.textContent = document.lastModified;
-}
 
 function makeTextElement(tagName, className, text) {
   const element = document.createElement(tagName);
@@ -82,11 +72,15 @@ async function loadMembers() {
 
     const members = await response.json();
     if (!Array.isArray(members)) {
-      throw new TypeError("Member directory data must be an array.");
+      console.error("Member directory data is not an array.");
+      throw new Error("Member data is not valid.");
     }
 
     const cards = members.map(makeMemberCard);
-    memberDirectory.replaceChildren(...cards);
+    memberDirectory.innerHTML = "";
+    cards.forEach((card) => {
+      memberDirectory.appendChild(card);
+    });
     directoryStatus.textContent = `${members.length} sample organizations in the directory`;
   } catch (error) {
     console.error("Unable to load the member directory.", error);
@@ -96,7 +90,8 @@ async function loadMembers() {
       "directory-error",
       "We could not retrieve the directory members. Please check your connection and try again.",
     );
-    memberDirectory.replaceChildren(message);
+    memberDirectory.innerHTML = "";
+    memberDirectory.appendChild(message);
   }
 }
 
@@ -116,35 +111,5 @@ viewButtons.forEach((button) => {
     });
   });
 });
-
-const menuButton = document.querySelector(".menu-toggle");
-const navigation = document.querySelector("#primary-navigation");
-
-if (menuButton && navigation) {
-  const closeMenu = () => {
-    menuButton.setAttribute("aria-expanded", "false");
-    menuButton.setAttribute("aria-label", "Open navigation menu");
-    navigation.classList.remove("is-open");
-  };
-
-  menuButton.addEventListener("click", () => {
-    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-    menuButton.setAttribute("aria-expanded", String(!isOpen));
-    menuButton.setAttribute("aria-label", isOpen ? "Open navigation menu" : "Close navigation menu");
-    navigation.classList.toggle("is-open", !isOpen);
-  });
-
-  navigation.addEventListener("click", (event) => {
-    if (event.target instanceof Element && event.target.closest("a")) {
-      closeMenu();
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeMenu();
-    }
-  });
-}
 
 loadMembers();

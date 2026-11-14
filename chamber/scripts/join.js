@@ -1,30 +1,19 @@
-const currentYear = document.querySelector("#current-year");
-const lastModified = document.querySelector("#last-modified");
 const timestamp = document.querySelector("#timestamp");
-
-if (currentYear) {
-  currentYear.textContent = String(new Date().getFullYear());
-}
-
-if (lastModified) {
-  lastModified.textContent = document.lastModified;
-}
 
 if (timestamp) {
   timestamp.value = new Date().toISOString();
 }
 
-const dialogOpeners = new WeakMap();
-
 document.querySelectorAll(".membership-info-link").forEach((link) => {
   link.addEventListener("click", (event) => {
-    const target = document.querySelector(link.getAttribute("href"));
-    if (!(target instanceof HTMLDialogElement)) {
+    const targetId = link.getAttribute("href");
+    const target = document.querySelector(targetId);
+    if (!target || target.tagName !== "DIALOG") {
       return;
     }
 
     event.preventDefault();
-    dialogOpeners.set(target, link);
+    target.setAttribute("data-opener", link.className);
     target.showModal();
     target.querySelector(".dialog-close")?.focus();
   });
@@ -49,8 +38,10 @@ document.querySelectorAll(".membership-dialog").forEach((dialog) => {
   });
 
   dialog.addEventListener("close", () => {
-    dialogOpeners.get(dialog)?.focus();
-    dialogOpeners.delete(dialog);
+    const opener = document.querySelector("." + (dialog.getAttribute("data-opener") || ""));
+    if (opener) {
+      opener.focus();
+    }
   });
 });
 

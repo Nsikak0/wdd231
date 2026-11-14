@@ -1,16 +1,6 @@
-const currentYear = document.querySelector("#current-year");
-const lastModified = document.querySelector("#last-modified");
 const confirmationMessage = document.querySelector("#confirmation-message");
 const applicationSummary = document.querySelector("#application-summary");
 const query = new URLSearchParams(window.location.search);
-
-if (currentYear) {
-  currentYear.textContent = String(new Date().getFullYear());
-}
-
-if (lastModified) {
-  lastModified.textContent = document.lastModified;
-}
 
 const requiredFields = ["firstName", "lastName", "email", "phone", "organization", "timestamp"];
 const applicationWasSubmitted = requiredFields.every((field) => query.get(field)?.trim());

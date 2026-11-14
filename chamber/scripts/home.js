@@ -1,16 +1,6 @@
-const currentYear = document.querySelector("#current-year");
-const lastModified = document.querySelector("#last-modified");
 const weatherCurrent = document.querySelector("#weather-current");
 const weatherForecast = document.querySelector("#weather-forecast");
 const spotlightList = document.querySelector("#spotlight-list");
-
-if (currentYear) {
-  currentYear.textContent = String(new Date().getFullYear());
-}
-
-if (lastModified) {
-  lastModified.textContent = document.lastModified;
-}
 
 const weatherDescriptions = new Map([
   [0, "Clear sky"],
@@ -84,7 +74,7 @@ async function loadWeather() {
     }
 
     const current = weather.current;
-    weatherCurrent.replaceChildren();
+    weatherCurrent.innerHTML = "";
 
     const currentTop = document.createElement("div");
     currentTop.className = "weather-current__top";
@@ -140,17 +130,22 @@ async function loadWeather() {
       );
       return forecast;
     });
-    weatherForecast.replaceChildren(...forecastItems);
+    weatherForecast.innerHTML = "";
+    forecastItems.forEach((item) => {
+      weatherForecast.appendChild(item);
+    });
   } catch (error) {
     console.error("Unable to load Lagos weather.", error);
-    weatherCurrent.replaceChildren(
+    weatherCurrent.innerHTML = "";
+    weatherCurrent.appendChild(
       makeElement(
         "p",
         "weather-error",
         "Current weather is temporarily unavailable. Please try again later.",
       ),
     );
-    weatherForecast.replaceChildren(
+    weatherForecast.innerHTML = "";
+    weatherForecast.appendChild(
       makeElement(
         "p",
         "weather-error",
@@ -215,14 +210,16 @@ async function loadSpotlights() {
 
     const members = await response.json();
     if (!Array.isArray(members)) {
-      throw new TypeError("Member data must be an array.");
+      console.error("Member data is not an array.");
+      throw new Error("Member data is not valid.");
     }
 
     const eligibleMembers = members.filter(
       (member) => member.membershipLevel === 2 || member.membershipLevel === 3,
     );
     if (eligibleMembers.length < 2) {
-      throw new RangeError("At least two silver or gold members are required.");
+      console.error("Not enough silver or gold members available.");
+      throw new Error("Not enough members for spotlights.");
     }
 
     const shuffledMembers = [...eligibleMembers];
@@ -235,10 +232,14 @@ async function loadSpotlights() {
     }
 
     const cards = shuffledMembers.slice(0, 3).map(createSpotlight);
-    spotlightList.replaceChildren(...cards);
+    spotlightList.innerHTML = "";
+    cards.forEach((card) => {
+      spotlightList.appendChild(card);
+    });
   } catch (error) {
     console.error("Unable to load member spotlights.", error);
-    spotlightList.replaceChildren(
+    spotlightList.innerHTML = "";
+    spotlightList.appendChild(
       makeElement(
         "p",
         "spotlight-error",
@@ -246,36 +247,6 @@ async function loadSpotlights() {
       ),
     );
   }
-}
-
-const menuButton = document.querySelector(".menu-toggle");
-const navigation = document.querySelector("#primary-navigation");
-
-if (menuButton && navigation) {
-  const closeMenu = () => {
-    menuButton.setAttribute("aria-expanded", "false");
-    menuButton.setAttribute("aria-label", "Open navigation menu");
-    navigation.classList.remove("is-open");
-  };
-
-  menuButton.addEventListener("click", () => {
-    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-    menuButton.setAttribute("aria-expanded", String(!isOpen));
-    menuButton.setAttribute("aria-label", isOpen ? "Open navigation menu" : "Close navigation menu");
-    navigation.classList.toggle("is-open", !isOpen);
-  });
-
-  navigation.addEventListener("click", (event) => {
-    if (event.target instanceof Element && event.target.closest("a")) {
-      closeMenu();
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeMenu();
-    }
-  });
 }
 
 loadWeather();

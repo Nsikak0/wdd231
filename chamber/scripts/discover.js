@@ -8,11 +8,6 @@ const dialogHeading = document.querySelector("#place-dialog-heading");
 const dialogDetails = document.querySelector("#place-dialog-details");
 const placeSourceContainer = document.querySelector("#place-source");
 const imageSourceContainer = document.querySelector("#image-source");
-const currentYear = document.querySelector("#current-year");
-const lastModified = document.querySelector("#last-modified");
-const menuButton = document.querySelector(".menu-toggle");
-const navigation = document.querySelector("#primary-navigation");
-const dialogOpeners = new WeakMap();
 const lastVisitKey = "nigeria-chamber-discover-last-visit";
 
 function showVisitMessage() {
@@ -45,7 +40,7 @@ function createPlaceCard(place, index) {
   const figure = document.createElement("figure");
   const image = document.createElement("img");
   image.src = `images/${place.image}`;
-  image.alt = `View of ${place.title}`;
+  image.alt = place.title;
   image.width = 250;
   image.height = 167;
   image.loading = "lazy";
@@ -64,16 +59,19 @@ function createPlaceCard(place, index) {
   button.type = "button";
   button.textContent = "Learn more";
   button.title = "Learn more";
+  button.dataset.placeIndex = String(index);
   button.addEventListener("click", () => {
     dialogHeading.textContent = place.title;
     dialogDetails.textContent = place.details;
-    placeSourceContainer.replaceChildren(
+    placeSourceContainer.innerHTML = "";
+    placeSourceContainer.appendChild(
       createSourceLink(place.sourceUrl, "Read more about this place"),
     );
-    imageSourceContainer.replaceChildren(
+    imageSourceContainer.innerHTML = "";
+    imageSourceContainer.appendChild(
       createSourceLink(place.imageSource, "Image source"),
     );
-    dialogOpeners.set(placeDialog, button);
+    placeDialog.setAttribute("data-opener", String(index));
     placeDialog.showModal();
     placeDialog.querySelector(".dialog-close").focus();
   });
@@ -92,6 +90,9 @@ function createSourceLink(url, text) {
 }
 
 function closeMenu() {
+  const menuButton = document.querySelector(".menu-toggle");
+  const navigation = document.querySelector("#primary-navigation");
+  
   if (!menuButton || !navigation) {
     return;
   }
@@ -108,40 +109,14 @@ try {
     "Welcome! Let us know if you have any questions. (Visit history is unavailable in this browser.)";
 }
 
-if (currentYear) {
-  currentYear.textContent = String(new Date().getFullYear());
-}
-
-if (lastModified) {
-  lastModified.textContent = document.lastModified;
-}
-
-if (!Array.isArray(attractions) || attractions.length !== 8) {
-  throw new TypeError("The Discover page requires exactly eight points of interest.");
-}
-
-discoverGrid.replaceChildren(...attractions.map(createPlaceCard));
-discoverStatus.textContent = `${attractions.length} places of interest in Lagos State`;
-
-if (menuButton && navigation) {
-  menuButton.addEventListener("click", () => {
-    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-    menuButton.setAttribute("aria-expanded", String(!isOpen));
-    menuButton.setAttribute("aria-label", isOpen ? "Open navigation menu" : "Close navigation menu");
-    navigation.classList.toggle("is-open", !isOpen);
+if (Array.isArray(attractions) && attractions.length === 8) {
+  discoverGrid.innerHTML = "";
+  attractions.forEach((place, index) => {
+    discoverGrid.appendChild(createPlaceCard(place, index));
   });
-
-  navigation.addEventListener("click", (event) => {
-    if (event.target instanceof Element && event.target.closest("a")) {
-      closeMenu();
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeMenu();
-    }
-  });
+  discoverStatus.textContent = `${attractions.length} places of interest in Lagos State`;
+} else {
+  discoverStatus.textContent = "Could not load places of interest. Please refresh the page.";
 }
 
 placeDialog.querySelector(".dialog-close").addEventListener("click", () => {
@@ -162,6 +137,11 @@ placeDialog.addEventListener("keydown", (event) => {
 });
 
 placeDialog.addEventListener("close", () => {
-  dialogOpeners.get(placeDialog)?.focus();
-  dialogOpeners.delete(placeDialog);
+  const opener = placeDialog.getAttribute("data-opener");
+  if (opener !== null) {
+    const buttons = discoverGrid.querySelectorAll(".discover-card__more");
+    if (buttons[opener]) {
+      buttons[opener].focus();
+    }
+  }
 });
